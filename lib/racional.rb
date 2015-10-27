@@ -10,4 +10,7 @@ class Racional
     def *(fraccion)
         Racional.new(@num * fraccion.num, @den * fraccion.den)
     end
+    def /(fraccion)
+        Racional.new(@num * fraccion.den, @den * fraccion.num)
+    end
 end
