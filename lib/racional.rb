@@ -7,4 +7,7 @@ class Racional
     def to_s
         "#{@num}/#{@den}"
     end
+    def *(fraccion)
+        Racional.new(@num * fraccion.num, @den * fraccion.den)
+    end
 end
