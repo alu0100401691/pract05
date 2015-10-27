@@ -6,6 +6,7 @@ class TestRacional < Test::Unit::TestCase
     @r1 = Racional.new(4,4)
     @r2 = Racional.new(1,1)
     @r3 = Racional.new(3,4)
+    @r4 = Racional.new(2,3)
   end
   
   def test_simple
@@ -13,6 +14,7 @@ class TestRacional < Test::Unit::TestCase
     assert_equal("1/1", @r2.to_s)
     assert_equal("12/16", (@r1 * @r3).to_s)
     assert_equal("16/12", (@r1 / @r3).to_s)
+    assert_equal("20/12", (@r1 + @r4).to_s)
   end
 
 end
