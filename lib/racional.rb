@@ -32,4 +32,9 @@ class Racional
         dc = mcm(@den, fraccion.den)
         Racional.new((@num * (dc/@den)) + (fraccion.num * (dc/fraccion.den)),dc)
     end
+    
+    def -(fraccion)
+        dc = mcm(@den, fraccion.den)
+        Racional.new((@num * (dc/@den)) - (fraccion.num * (dc/fraccion.den)),dc)
+    end
 end
