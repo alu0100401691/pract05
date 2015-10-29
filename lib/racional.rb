@@ -2,7 +2,8 @@ class Racional
     attr_reader :num, :den #Solo lectura
 
     def initialize(num,den)
-        @num, @den = num, den
+        @mincm = mcm(num,den)
+        @num, @den = num/@mincm, den/@mincm
     end
     def to_s
         "#{@num}/#{@den}"
