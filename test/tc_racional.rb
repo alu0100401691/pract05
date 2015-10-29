@@ -17,5 +17,15 @@ class TestRacional < Test::Unit::TestCase
     assert_equal("20/12", (@r1 + @r4).to_s)
     assert_equal("4/12", (@r1 - @r4).to_s)
   end
+  
+    
+  def test_type_check
+    assert_raise(RuntimeError) {Racional.new('8','6')}
+  end
+  
+  def test_failure
+    assert_equal("8/4", @r3.to_s)
+  end
+
 
 end
